@@ -1,6 +1,8 @@
 # Spryker Feature: Return Management
 
-
+Return Management enables not only to manage the reverse product flow efficiently but to identify opportunities to reduce unwanted returns.
+Return Management allows Customers and Back-office users to select items that should be returned, create returns itself and add return reasons for these items. 
+Return Management also includes a Global return policy that defines Return days during what purchased product can be returned.
 
 ## Installation
 
