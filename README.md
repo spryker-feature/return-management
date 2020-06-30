@@ -14,3 +14,8 @@ composer require spryker-feature/return-management
 - [spryker-feature/order-management](https://github.com/spryker-feature/order-management)
 
 If you don't include the feature dependencies, make sure you use the respective modules instead.
+
+## Optional modules
+- [SalesReturnGuiExtension ^1.0.0](https://github.com/spryker/sales-return-gui-extension) (Extension)
+- [Shop.SalesReturnPageExtension ^1.0.0](https://github.com/spryker-shop/sales-return-page-extension) (Extension)
+- [SalesReturnsRestApi ^1.0.0](https://github.com/spryker/sales-returns-rest-api) (Glue)
