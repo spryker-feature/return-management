@@ -1,35 +1,50 @@
-language: php
+name: CI
 
-php:
-  - 7.3
-  - 7.4
+on: [push, pull_request, workflow_dispatch]
 
-env:
-  global:
-    - DEFAULT=1
+jobs:
+  validation:
+    name: Validation
+    runs-on: ubuntu-20.04
 
-matrix:
-  include:
-    - php: 7.3
-      env: PREFER_LOWEST=1 DEFAULT=0
+    steps:
+      - uses: actions/checkout@v2
 
-  fast_finish: true
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: mbstring, intl, bcmath
+          coverage: none
 
-before_install:
-  - if [[ ${TRAVIS_PHP_VERSION} != "7.4" ]]; then phpenv config-rm xdebug.ini ; fi
+      - name: Composer Install
+        run: composer install --prefer-dist --no-interaction --profile
 
-before_script:
-  - COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-interaction --profile
-  - if [[ $PREFER_LOWEST == 1 ]]; then COMPOSER_MEMORY_LIMIT=-1 composer update --prefer-lowest --prefer-dist --no-interaction --profile -vvv; fi
-  - if [[ $PREFER_LOWEST == 1 ]]; then COMPOSER_MEMORY_LIMIT=-1 composer require --dev dereuromark/composer-prefer-lowest; fi
+      - name: Run validation
+        run: composer validate
 
-script:
-  - if [[ $DEFAULT == 1 ]]; then composer validate; fi
-  - if [[ $PREFER_LOWEST == 1 ]]; then vendor/bin/validate-prefer-lowest; fi
+  lowest:
+    name: Prefer Lowest
+    runs-on: ubuntu-20.04
 
-cache:
-  directories:
-    - $HOME/.composer/cache
+    steps:
+      - uses: actions/checkout@v2
 
-notifications:
-  email: false
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.3'
+          extensions: mbstring, intl, bcmath
+          coverage: none
+
+      - name: Composer Install
+        run: composer install --prefer-dist --no-interaction --profile
+
+      - name: Composer Update
+        run: composer update --prefer-lowest --prefer-dist --no-interaction --profile -vvv
+
+      - name: Composer Install prefer lowest tool
+        run: composer require --dev dereuromark/composer-prefer-lowest;
+
+      - name: Run validation
+        run: vendor/bin/validate-prefer-lowest
