@@ -17,6 +17,6 @@ If you don't include the feature dependencies, make sure you use the respective 
 
 ## Optional modules
 - [SalesReturnExtension ^1.2.0](https://github.com/spryker/sales-return-extension) (Extension)
-- [SalesReturnGuiExtension ^1.0.0](https://github.com/spryker/sales-return-gui-extension) (Extension)
+- [SalesReturnGuiExtension ^1.1.0](https://github.com/spryker/sales-return-gui-extension) (Extension)
 - [Shop.SalesReturnPageExtension ^1.0.0](https://github.com/spryker-shop/sales-return-page-extension) (Extension)
-- [SalesReturnsRestApi ^1.0.0](https://github.com/spryker/sales-returns-rest-api) (Glue)
+- [SalesReturnsRestApi ^1.1.0](https://github.com/spryker/sales-returns-rest-api) (Glue)
