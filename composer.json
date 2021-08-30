@@ -8,9 +8,9 @@
     "require": {
         "php": ">=7.3",
         "spryker-shop/sales-return-page": "^1.3.0",
-        "spryker/sales-return": "^1.0.0",
+        "spryker/sales-return": "^1.3.0",
         "spryker/sales-return-data-import": "^0.2.0",
-        "spryker/sales-return-gui": "^1.0.0",
+        "spryker/sales-return-gui": "^1.2.0",
         "spryker/sales-return-search": "^1.0.0"
     },
     "extra": {
