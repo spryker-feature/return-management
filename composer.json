@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.4",
         "spryker-shop/sales-return-page": "^1.4.0",
         "spryker/sales-return": "^1.4.0",
         "spryker/sales-return-data-import": "^0.2.0",
