@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.0",
-        "spryker-shop/sales-return-page": "^1.4.0",
+        "spryker-shop/sales-return-page": "^1.5.0",
         "spryker/sales-return": "^1.4.0",
         "spryker/sales-return-data-import": "^0.2.0",
         "spryker/sales-return-gui": "^1.4.0",
@@ -15,7 +15,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "202211.x-dev"
+            "dev-master": "202212.x-dev"
         }
     },
     "suggest": {
