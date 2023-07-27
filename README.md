@@ -4,6 +4,8 @@ Return Management enables not only to manage the reverse product flow efficientl
 Return Management allows Customers and Back-office users to select items that should be returned, create returns itself and add return reasons for these items. 
 Return Management also includes a Global return policy that defines Return days during what purchased product can be returned.
 
+[Learn more](https://docs.spryker.com/docs/pbc/all/return-management/202307.0/base-shop/return-management-feature-overview.html)
+
 ## Installation
 
 ```
